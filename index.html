@@ -1,78 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=s wap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Practicalized DOM</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P id="demo"> The time is</P>
+    <p id="temp"> The temperature is</p>
+    
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+    <button onclick="document.getElementById('temp').innerHTML = Date()">Temperature</button>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+   
+   
+    <!-- 1 -->
+<button onclick="alert('Jane')">Click</button>
 
-  <body>
-    <div class="product-card">
-      <div class="product-image">
-        <!-- <img src="images/black_benz-.png" alt="cars" /> -->
-      </div>
-      <div class="product-description">
-        <h3 class="tag">CAR</h3>
-        <h1 class="product-title">Mercedez Benz c300 2022</h1>
-        <p class="product-details">
-          <span class="mileage">
-            <span style="font-size: 1em; color: black">
-              <i class="fa-solid fa-car"></i>
-            </span>
-            Mileage: 4,000 miles
-          </span>
-          <span class="fuel">
-            <span style="font-size: 1em; color: black">
-              <i class="fa-solid fa-gas-pump"></i>
-            </span>
-            Fuel: 25mpg
-          </span>
-          <span class="safety">
-            <span style="font-size: 1em; color: black">
-              <i class="fa-solid fa-shield"></i> </span
-            >Safety:
-            <span class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </span>
-          </span>
-        </p>
-        <p>Pick a color:</p>
-        <div class="colors-price">
-          <div class="colors">
-            <span class="red"></span>
-            <span class="gray"></span>
-            <span class="black"></span>
-          </div>
-          <div class="pricing">
-            <h2 class="new-price">$134,450</h2>
-            <h4 class="old-price"><s>$140,500</s></h4>
-          </div>
-        </div>
-        <button id="button">
-          <span style="font-size: 1em; color: white">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </span>
-          <span class="button-text">Add to Cart</span>
-        </button>
-        <button class="feedback">
-          <span id="white-button"
-            >🥳 Woohoo, You're about to own a benz 🎊</span
-          >
-        </button>
-      </div>
-    </div>
-    <script src="app.js">
+<!-- 2.Make a html text input which logs the value when the input is changing -->
+<input 
+type="text" value="beautiful" onchange="inputHandler(this)"
+/>
+
+
+<!-- 3. Write a <div> element which turns red when someone moves the mouse over it. -->
+<div onmouseover="this.style.color='red'">Hover me to turn red</div>
+<div onmouseover="this.style.color='green'">Hover me to turn green</div>
+
+
+<script>
+        // Question1
+// const person = {
+//  firstName: "John",
+//  lastName: "Doe"
+// };
+// alert(person.firstName);
+
+// question2
+// const person = {
+//  firstName: "Jane",
+//  lastName: "Doe",
+//  country:'Uganda'
+// };
+
+// const person= {
+//     name :'John',
+//     age : 50
+//     };
+//   console.log(person.name + ' is ' + person.age);
+//   document.write(person.name + ' is ' + person.age);
+
+//   console.log(Object.entries(person))
+//   console.log(Object.keys(Person))
+//   console.log(Object.values(person))
+
+//   const pK=['name','Age']
+// //   pK.map()
+
+// 1.Write a button element, it should do something e.g Alert Jane when someone clicks on it.
+
+// 2. 
+function inputHandler(e){
+    console.log(e.value)
+}
+
     </script>
-  </body>
+</body>
 </html>
